@@ -1,0 +1,39 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion "25"
+    useLibrary "org.apache.http.legacy"
+    defaultConfig {
+        applicationId "com.frank.android.testdemo"
+        minSdkVersion 15
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile  'com.android.support:appcompat-v7:27.0.2'
+    compile  'com.android.support.constraint:constraint-layout:1.1.0'
+    testCompile 'junit:junit:4.12'
+//    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+//    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    compile 'cn.bingoogolapple:bga-photopicker:1.2.8@aar'
+    compile 'cn.bingoogolapple:bga-baseadapter:1.2.7@aar'
+    compile 'com.android.support:support-v4:27.0.2'
+    compile 'com.android.support:recyclerview-v7:27.0.2'
+    compile 'pub.devrel:easypermissions:1.0.1'
+    compile 'com.github.bumptech.glide:glide:4.5.0'
+
+    compile project(':volley')
+}

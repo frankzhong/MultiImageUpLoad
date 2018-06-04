@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <cn.bingoogolapple.photopicker.widget.BGASortableNinePhotoLayout
+        android:id="@+id/snpl_moment_add_photos"
+        style="@style/WrapWrap"
+        android:layout_margin="10dp"
+        app:bga_snpl_deleteDrawable="@mipmap/bga_pp_ic_delete"
+        app:bga_snpl_deleteDrawableOverlapQuarter="false"
+        app:bga_snpl_editable="true"
+        app:bga_snpl_itemCornerRadius="0dp"
+        app:bga_snpl_itemSpanCount="3"
+        app:bga_snpl_itemWhiteSpacing="4dp"
+        app:bga_snpl_itemWidth="0dp"
+        app:bga_snpl_maxItemCount="9"
+        app:bga_snpl_otherWhiteSpacing="100dp"
+        app:bga_snpl_placeholderDrawable="@mipmap/bga_pp_ic_holder_light"
+        app:bga_snpl_plusDrawable="@mipmap/bga_pp_ic_plus"
+        app:bga_snpl_plusEnable="true"
+        app:bga_snpl_sortable="true" />
+
+    <Button
+        android:id="@+id/btn_upload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="112dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="36dp"
+        android:text="上传"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/snpl_moment_add_photos"/>
+
+</android.support.constraint.ConstraintLayout>
